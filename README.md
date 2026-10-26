@@ -14,7 +14,7 @@ No dependencies to install: you only need **Node.js 18 or later**.
 |---|---|
 | `server.js` | The server (webhook, WhatsApp, Claude) |
 | `prompt.md` | The agent's instructions. Edit it to change how the agent behaves. |
-| `.env.example` | Configuration template. Copy it to `.env` and fill it in. |
+| `.env` | Configuration template. Fill it. |
 | `start-windows.bat` | Starts the server on Windows and restarts it if it stops |
 | `install-windows-service.ps1` | Makes the server start automatically with Windows |
 | `whatsapp-agent.service` | The Linux equivalent (systemd) |
@@ -38,7 +38,7 @@ No dependencies to install: you only need **Node.js 18 or later**.
 
 ## 2. Configure (5 min)
 
-Copy `.env.example` to a file named exactly **`.env`** in the same folder and fill in:
+Open the file **`.env`** in the same folder and fill in:
 
 | Variable | Where to find it |
 |---|---|
