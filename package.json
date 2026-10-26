@@ -1,0 +1,11 @@
+{
+  "name": "whatsapp-claude-agent",
+  "version": "1.0.0",
+  "description": "WhatsApp AI agent: WhatsApp Cloud API + Claude",
+  "type": "module",
+  "main": "server.js",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

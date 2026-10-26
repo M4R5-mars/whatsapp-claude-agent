@@ -1,0 +1,25 @@
+# WhatsApp agent: systemd service (Linux).
+# Adjust WorkingDirectory, User and the node path (run `which node`), then:
+#   sudo cp whatsapp-agent.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now whatsapp-agent
+# Logs: journalctl -u whatsapp-agent -f
+
+[Unit]
+Description=WhatsApp AI agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/whatsapp-claude-agent
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=10
+User=whatsapp-agent
+# Basic hardening
+NoNewPrivileges=true
+ProtectSystem=full
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
